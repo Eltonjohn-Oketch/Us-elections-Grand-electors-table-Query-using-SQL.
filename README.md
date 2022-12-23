@@ -11,13 +11,20 @@ Here is what we are suggesting to do: we will rank states by decreasing number o
 1.) To join the 2 tables:
 You notice States are not capitalized the same way in both tables (one is in uppercase letters, the other not), so you will first need to convert all to uppercase, for instance.
 Now you can join the tables on the state key.
+
 2.) Your boss wants you to change the name of the "District of Columbia" state to its short version "DC". Please do that.
+
 3.)To compute the ratio between the number of grand electors and the population. Please create a new column with that ratio.
+
 4.)To order the states by decreasing ratio of Grand Electors per capita. That will make our priority list.
+
 5.)To compute the running total of Grand Electors in that sorted list.
+
 Hint: you can get inspiration from here to compute a running total from here:  https://stackoverflow.com/questions/21382766/cumulative-summing-values-in-sqliteLinks to an external site.
+
 6.)Independently, to compute the half of the total of Grand Electors overall (in the whole country):
 This is the threshold we need to reach for winning the presidential election.
+
 7.)To filter our sorted list of states in order to keep only the (top) ones enabling us to reach the computed threshold. (the other states can be ignored). That is our target list.
 Hint: You can do that in 2 steps:
 Select all the states for which the running total is below or equal to the threshold.
